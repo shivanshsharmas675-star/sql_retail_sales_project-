@@ -15,7 +15,12 @@ price_per_unit FLOAT,
 cogs FLOAT,
 total_sale FLOAT
 );
--- Data Cleaning 
+-- Data Exploration & Cleaning
+
+SELECT COUNT(*) FROM retail_sales;
+SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
+SELECT DISTINCT category FROM retail_sales;
+
 SELECT  * FROM retail_sales
 WHERE 
 transactions_id IS NULL
